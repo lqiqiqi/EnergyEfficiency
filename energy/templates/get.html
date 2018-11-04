@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate the hear load and cool load</title>
+</head>
+<body>
+    <form action = "/result/" method = "get">
+        {%  csrf_token %}
+        Relative Compactness (surface-area-to-volume ratio): <input type="number" step = "any" name="X1" value = 0.764167> <br />
+        Surface Area: <input type="number" name="X2" step = "any" value = 671.708333> <br />
+        Wall Area: <input type="number" name="X3" step = "any" value = 318.50000> <br />
+        Roof Area: <input type="number" name="X4" step = "any" value = 176.604167> <br />
+        Overall Height: <input type="number" name="X5" step = "any" value = 5.25> <br />
+        Orientation: <input type="number" name="X6" step = "any" value = 3.5> <br />
+        Glazing Area: <input type="number" name="X7" step = "any" value = 0.234375> <br />
+        Glazing Area Distribution: <input type="text" name="X8" step = "any" value = 2.812500> <br />
+        <input type="submit" value="Submit">
+    </form>
+<p></p>
+
+</body>
+</html>

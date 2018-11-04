@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>result</title>
+</head>
+<body>
+heat load: <p> {{ heatload }} BTU </p> <br />
+cool load: <p> {{ coolload }} BTU </p> <br />
+
+{% if heatload < 11.67 and coolload < 14.52 %}
+    the efficiency classification: very low heating and cooling requirement
+{% elif 15.92 > heatload and heatload >= 11.67 and 18.65 > coolload and coolload >= 14.52  %}
+    the efficiency classification: low heating and cooling requirement
+{% elif 26.27 > heatload and heatload >= 15.92 and 28.27 > coolload and coolload >= 18.65  %}
+    the efficiency classification: medium heating and cooling requirement
+{% elif 32.32 > heatload and heatload >= 26.27 and 34.03 > coolload and coolload >= 28.27  %}
+    the efficiency classification: high heating and cooling requirement
+{% else %}
+    the efficiency classification: very high heating and cooling requirement
+{% endif %}
+</body>
+</html>

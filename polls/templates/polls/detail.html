@@ -1,0 +1,33 @@
+{#<h1>{{ question.question_text }}</h1>#}
+{##}
+{#{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}#}
+
+{#<form action="{% url 'polls:vote' question.id %}" method="post">#}
+{#{% csrf_token %}#}
+{#{% for choice in question.choice_set.all %}#}
+{#    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">#}
+{#    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>#}
+{#{% endfor %}#}
+{#<input type="submit" value="Vote">#}
+
+{#<p>请输入两个数字</p>#}
+{##}
+{#<form action=="{% url 'polls:vote' question.id %}" method="get">#}
+{#    Relative Compactness: <input type="text" name="X1"> <br>#}
+{#    Surface Area: <input type="text" name="X2"> <br>#}
+{#    Wall Area: <input type="text" name="X3"> <br>#}
+{#    Roof Area: <input type="text" name="X4"> <br>#}
+{#    Overall Height: <input type="text" name="X5"> <br>#}
+{#    Orientation: <input type="text" name="X6"> <br>#}
+{#    Glazing Area: <input type="text" name="X7"> <br>#}
+{#    Glazing Area Distribution: <input type="text" name="X8"> <br>#}
+{##}
+{#    <input type="submit" value="提交">#}
+{##}
+{#</form>#}
+
+<form method='post'>
+{% csrf_token %}
+{{ form }}
+<input type="submit" value="提交">
+</form>
